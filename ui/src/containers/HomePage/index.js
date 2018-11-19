@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './homePage.css'
 import { CAMPAIGN_VALUES } from '../../utils/constants';
+import { createCampaign } from '../../services/advertisement';
+
 
 function HomePage() {
   // Declare a new state variable, which we'll call "count"
@@ -14,7 +16,10 @@ function HomePage() {
 
       <div class="margin-60">
           <p>You clicked {count} times</p>
-          <button onClick={() => setCount(count + 1)}>
+          <button onClick={() => {
+              setCount(count + 1);
+              createCampaign();
+          }}>
           Create Campaign
           </button>
       </div>

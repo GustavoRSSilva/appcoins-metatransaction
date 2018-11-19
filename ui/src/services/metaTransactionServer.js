@@ -1,4 +1,4 @@
-const Transaction = require('./transaction');
+import Transaction from './transaction';
 
 class MetaTransactionServer  {
 
@@ -27,4 +27,4 @@ class MetaTransactionServer  {
 
 }
 
-module.exports = MetaTransactionServer;
+export default MetaTransactionServer;

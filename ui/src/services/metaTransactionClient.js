@@ -1,7 +1,7 @@
-const Web3 = require('web3');
-const util = require("ethereumjs-util");
-const EthereumjsTx = require('ethereumjs-tx');
-const Transaction = require('./transaction');
+import Web3 from 'web3';
+import util from 'ethereumjs-util';
+import EthereumjsTx from 'ethereumjs-tx';
+import Transaction from './transaction';
 
 const INFURA_ROPSTEN_PROVIDER = 'https://ropsten.infura.io/4SzKbtKU0oVsatNCotgc';
 
@@ -69,4 +69,4 @@ class MetaTransactionClient  {
 
 }
 
-module.exports = MetaTransactionClient;
+export default MetaTransactionClient;
