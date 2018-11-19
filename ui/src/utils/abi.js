@@ -670,3 +670,76 @@ export const ADVERTISEMENT_ABI = [
       "type": "function"
     }
   ];
+
+  export const TX_RELAY_ABI = [
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "nonce",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "sigV",
+				"type": "uint8"
+			},
+			{
+				"name": "sigR",
+				"type": "bytes32"
+			},
+			{
+				"name": "sigS",
+				"type": "bytes32"
+			},
+			{
+				"name": "destination",
+				"type": "address"
+			},
+			{
+				"name": "data",
+				"type": "bytes"
+			},
+			{
+				"name": "sender",
+				"type": "address"
+			}
+		],
+		"name": "relayMetaTx",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "from",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "message",
+				"type": "string"
+			}
+		],
+		"name": "Log",
+		"type": "event"
+	}
+];

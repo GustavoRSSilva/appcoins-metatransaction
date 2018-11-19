@@ -11,10 +11,10 @@ function HomePage() {
   return (
     <div id="homepage">
       <h1>Campaign</h1>
-      {Object.keys(CAMPAIGN_VALUES).map((index) => <p>{`${index}: ${CAMPAIGN_VALUES[index]}`}</p>)}
+      {Object.keys(CAMPAIGN_VALUES).map((index) => <p key={index}>{`${index}: ${CAMPAIGN_VALUES[index]}`}</p>)}
 
 
-      <div class="margin-60">
+      <div className="margin-60">
           <p>You clicked {count} times</p>
           <button onClick={() => {
               setCount(count + 1);

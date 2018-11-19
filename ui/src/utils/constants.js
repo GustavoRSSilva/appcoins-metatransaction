@@ -2,10 +2,10 @@ export const ADVERTISEMENT_CONTRACT_ADDRESS = '0xc2f4b41eb45097e32251ac1592226c6
 export const CREATE_CAMPAIGN = 'createCampaign';
 export const CAMPAIGN_VALUES = {
     packageName: 'com.meta.transaction',
-    countries: [1],
+    countries: [0,2,0],
     vercodes: [1],
-    price: 10000000000000000000,
-    budget: 500000000000000000,
+    price: 1,
+    budget: 2,
     startDate: 1542364565068,
     endDate: 1515024000000,
 };
@@ -15,3 +15,6 @@ export const CLIENT_ADDRESS = '0x3c63116E7594CFeBD5B950352Fc89DF21c1C5F9e';
 
 export const SERVER_PRIVATE_KEY = '0x8418aae96ffc26ec190e8e198319f20c78de9ab533c18bd9a623c024eac23813';
 export const SERVER_ADDRESS = '0x1DD02B96E9D55E16c646d2F21CA93A705ac667Bf';
+
+// https://ropsten.etherscan.io/address/0xf8eaaaa76e744cd30171afd00b7827557edcbacd
+export const TX_RELAY_CONTRACT_ADDRESS = '0xf8eaaaa76e744cd30171afd00b7827557edcbacd';

@@ -60,6 +60,10 @@ class Transaction {
   static encodeFunctionTxData(functionName, types, args) {
     let fullName = functionName + '(' + types.join() + ')';
     let signature = CryptoJS.SHA3(fullName, { outputLength: 256 }).toString(CryptoJS.enc.Hex).slice(0, 8);
+
+    console.log("yoooo");
+    console.log("fullname", fullName);
+    console.log("signature", signature);
     return signature + util.stripHexPrefix(web3.eth.abi.encodeParameters(types, args));
   };
 
